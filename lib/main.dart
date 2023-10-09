@@ -1,3 +1,4 @@
+import 'package:doctor_consultant_app/constants.dart';
 import 'package:doctor_consultant_app/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Healthcare - Doctor Consultation App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+          primarySwatch: Colors.blue,
+          elevatedButtonTheme: ElevatedButtonThemeData(
+              style: TextButton.styleFrom(
+                  padding: EdgeInsets.all(defaultPadding)))),
       home: const WelcomeScreen(),
     );
   }
