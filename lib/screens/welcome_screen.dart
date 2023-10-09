@@ -1,4 +1,5 @@
 import 'package:doctor_consultant_app/constants.dart';
+import 'package:doctor_consultant_app/screens/auth/sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -21,7 +22,11 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SignUpScreen()),
+                          ),
                       style: TextButton.styleFrom(
                         backgroundColor: Color(0xFF6CD8D1),
                       ),
