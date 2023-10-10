@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
               border: textFieldBorder,
               enabledBorder: textFieldBorder,
               focusedBorder: textFieldBorder)),
-      home: const NewWelcomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
