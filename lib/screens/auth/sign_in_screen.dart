@@ -49,37 +49,7 @@ class SignInScreen extends StatelessWidget {
                 SizedBox(
                   height: defaultPadding * 3,
                 ),
-                Form(
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                      TextFieldName(
-                        text: "Email",
-                      ),
-                      TextFormField(
-                        keyboardType: TextInputType.emailAddress,
-                        decoration: InputDecoration(),
-                        validator:
-                            EmailValidator(errorText: "Use a valid email!"),
-                      ),
-                      SizedBox(
-                        height: defaultPadding * 2,
-                      ),
-                      TextFieldName(
-                        text: "Password",
-                      ),
-                      TextFormField(
-                        obscureText: true,
-                        decoration: InputDecoration(),
-                        validator: passwordValidator,
-                      ),
-                      SizedBox(
-                        height: defaultPadding,
-                      ),
-                      TextFieldName(
-                        text: "Forgot your Password?",
-                      ),
-                    ])),
+                SignInForm(),
                 SizedBox(
                   height: defaultPadding * 2,
                 ),
@@ -100,5 +70,43 @@ class SignInScreen extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class SignInForm extends StatelessWidget {
+  const SignInForm({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+      TextFieldName(
+        text: "Email",
+      ),
+      TextFormField(
+        keyboardType: TextInputType.emailAddress,
+        decoration: InputDecoration(),
+        validator: EmailValidator(errorText: "Use a valid email!"),
+      ),
+      SizedBox(
+        height: defaultPadding * 2,
+      ),
+      TextFieldName(
+        text: "Password",
+      ),
+      TextFormField(
+        obscureText: true,
+        decoration: InputDecoration(),
+        validator: passwordValidator,
+      ),
+      SizedBox(
+        height: defaultPadding,
+      ),
+      TextFieldName(
+        text: "Forgot your Password?",
+      ),
+    ]));
   }
 }

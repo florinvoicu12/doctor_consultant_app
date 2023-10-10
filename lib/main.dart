@@ -1,4 +1,5 @@
 import 'package:doctor_consultant_app/constants.dart';
+import 'package:doctor_consultant_app/screens/new_welcome_screen.dart';
 import 'package:doctor_consultant_app/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
               border: textFieldBorder,
               enabledBorder: textFieldBorder,
               focusedBorder: textFieldBorder)),
-      home: const WelcomeScreen(),
+      home: const NewWelcomeScreen(),
     );
   }
 }

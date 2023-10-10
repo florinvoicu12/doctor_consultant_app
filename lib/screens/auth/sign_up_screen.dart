@@ -3,7 +3,6 @@ import 'package:doctor_consultant_app/screens/auth/components/sign_up_form.dart'
 import 'package:doctor_consultant_app/screens/auth/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:form_field_validator/form_field_validator.dart';
 
 class SignUpScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
