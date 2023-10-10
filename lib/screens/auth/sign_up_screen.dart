@@ -1,5 +1,6 @@
 import 'package:doctor_consultant_app/constants.dart';
 import 'package:doctor_consultant_app/screens/auth/components/sign_up_form.dart';
+import 'package:doctor_consultant_app/screens/auth/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:form_field_validator/form_field_validator.dart';
@@ -32,7 +33,11 @@ class SignUpScreen extends StatelessWidget {
                     children: [
                       Text("Already have an account?"),
                       TextButton(
-                          onPressed: () {},
+                          onPressed: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      SignInScreen())),
                           child: Text(
                             "Sign in!",
                             style: TextStyle(fontWeight: FontWeight.bold),
