@@ -1,5 +1,4 @@
-import 'package:doctor_consultant_app/constants.dart';
-import 'package:doctor_consultant_app/screens/new_sign_in_screen.dart';
+import 'package:doctor_consultant_app/screens/auth/sign_in_screen.dart';
 import 'package:doctor_consultant_app/screens/new_sign_up_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -48,7 +47,7 @@ class NewWelcomeScreen extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                               builder: (BuildContext context) =>
-                                  const NewSignInScreen())),
+                                  SignInScreen())),
                       child: Text("Sign In"),
                       style: TextButton.styleFrom(
                           backgroundColor: Colors.transparent,
